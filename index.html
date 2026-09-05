@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador Neón Violeta</title>
+    <meta name="description" content="Un temporizador digital moderno y elegante con luces neón violeta, etiqueta personalizada de hasta 64 caracteres y efectos visuales increíbles.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="app-container">
+        <!-- Dashboard Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="neon-icon">⏱</span>
+                <h1 class="glow-text">NEON<span class="violet-highlight">TIMER</span></h1>
+            </div>
+            <div class="header-actions">
+                <button id="soundToggleBtn" class="icon-btn" title="Activar/Desactivar Sonido">
+                    <span class="btn-icon">🔊</span>
+                </button>
+                <button id="addTimerBtn" class="btn btn-secondary">
+                    <span>+ Nuevo Temporizador</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Timers List Container -->
+        <main id="timersList" class="timers-list">
+            <!-- Main Primary Timer Card -->
+        </main>
+
+        <!-- Presets Bar -->
+        <section class="presets-section">
+            <h3 class="section-title">Ajustes Rápidos</h3>
+            <div class="presets-grid">
+                <button class="preset-btn" data-time="60">+1m</button>
+                <button class="preset-btn" data-time="300">+5m</button>
+                <button class="preset-btn" data-time="600">+10m</button>
+                <button class="preset-btn" data-time="900">15m Focus</button>
+                <button class="preset-btn" data-time="1500">25m Pomodoro</button>
+                <button class="preset-btn" data-time="3600">1h Estudio</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Alarm Audio Modal / Fullscreen Alert -->
+    <div id="alarmOverlay" class="alarm-overlay hidden">
+        <div class="alarm-content glass-card">
+            <div class="alarm-pulse-ring"></div>
+            <div class="alarm-icon">🔔</div>
+            <h2 id="alarmTitle" class="alarm-title">¡TIEMPO FINALIZADO!</h2>
+            <p id="alarmLabel" class="alarm-label-text">Etiqueta</p>
+            <button id="dismissAlarmBtn" class="btn btn-primary btn-glow">Entendido / Detener</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
